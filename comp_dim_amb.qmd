@@ -1,0 +1,293 @@
+---
+title: "Cáculo de Dimensión Ambiental"
+subtitle: "Comparación de Métodos"
+author: "Denis Berroeta"
+# date: "2023-08-25"
+bibliography: references.bib
+format:
+  revealjs:
+    footer: "Comparación de Métodos de Cáculo de Dimensión Ambiental"
+    logo: "images/leaf.png"
+    preview-links: true
+    css: style/style.css
+    transition: slide
+    center: true
+    chalkboard: true
+    theme: default
+---
+
+# Agenda 
+
+## Agenda
+
+::: columns
+::: {.column  width="50%" .p_small}
+
+1. Objetivos
+2. Comparación Proyecto CMPC
+    - Dimensión con Mazziota Paretto Index
+    - Dimensión con Método Algebraico
+    - Comparación de Métodos
+3. Comparación Proyecto SUBDERE. 
+    - Dimensión con Mazziota Paretto Index
+    - Dimensión con Método Algebraico
+    - Comparación de Métodos
+4. Conclusiones
+5. Referencias
+    - Indicadores Ambientales CMPC (nuevos)
+
+
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="45%" .p_small}
+
+<br>
+
+![Dimensión Ambiental MBHT](images/02_ambiental.png){fig-align="center" width="600"}
+
+
+:::
+:::
+
+# Objetivos
+
+## Objetivos
+
+::: columns
+::: {.column  width="50%" .p_small}
+
+**Objetivos Generales**
+
+- Comparar dos metodologías de cálculo de la dimensión ambiental en dos proyectos diferentes y analizar sus diferencias y determinar la idoneidad de su implementación en proyectos futuros.
+
+
+**Objetivos Específicos**
+
+- Implementar el método Mazziota Pareto Index y el método Algebraico para calcular la dimensión ambiental en el proyecto CMPC y SUBDERE.
+- Realizar un análisis comparativo de los resultados obtenidos por el método Mazziota Pareto Index y el método Algebraico para ambos proyectos.
+- Generar mapas gráficas estadísticas que representen las diferencias entre los resultados ambos métodos por cada proyecto.
+
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="45%" .p_small}
+
+<br>
+
+![Mapa de Dimensión Ambiental MBHT](images/map_dim_amb.png){fig-align="center" width="600"}
+
+
+:::
+:::
+
+
+# Comparación con CMPC
+
+## Mazziota Paretto 
+
+<center>
+
+```{r fig.align='center'}
+knitr::include_url("html/mpi_map.html", height = "500px")
+```
+
+</center>
+
+
+## Método Algebraico
+
+<center>
+
+```{r fig.align='center'}
+knitr::include_url("html/ma_map.html", height = "500px")
+```
+
+</center>
+
+
+
+
+## Comparación
+
+<center>
+
+```{r fig.align='center'}
+knitr::include_url("html/dif_map.html", height = "500px")
+```
+
+</center>
+
+## Distribución de los Datos
+
+::: {.panel-tabset}
+
+### Densidad
+
+![](images/comp_amb_cmpc.png){fig-align="center" width="700"}
+
+
+### Boxplot
+
+![](images/comp_amb_cmpc_bp.png){fig-align="center" width="600"}
+
+:::
+
+
+# Comparación con SUBDERE
+
+## Mazziota Paretto 
+
+<center>
+
+```{r fig.align='center'}
+knitr::include_url("html/mpi_map_pf.html", height = "500px")
+```
+
+</center>
+
+
+## Método Algebraico
+
+<center>
+
+```{r fig.align='center'}
+knitr::include_url("html/ma_map_pf.html", height = "500px")
+```
+
+</center>
+
+
+
+
+## Comparación
+
+<center>
+
+```{r fig.align='center'}
+knitr::include_url("html/dif_map_pf.html", height = "500px")
+```
+
+</center>
+
+## Distribución de Datos
+
+::: {.panel-tabset}
+
+## Densidad
+
+![](images/comp_amb_subdere.png){fig-align="center" width="700"}
+
+
+## Boxplot
+
+![](images/comp_amb_subdere_bp.png){fig-align="center" width="600"}
+
+:::
+
+
+# Conclusiones
+
+## Conclusiones: MPI
+
+::: columns
+::: {.column  width="55%" .p_small}
+
+El Método de _Mazziota Pareto Index_ presenta un desempeño aceptable únicamente cuando se utilizan dos indicadores. En este escenario, puede proporcionar una representación territorial adecuada de la dimensión ambiental. Sin embargo, **su eficacia disminuye significativamente cuando se incorporan más de dos indicadores**, ya que no logra capturar la variabilidad territorial de manera precisa.
+
+
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="40%" .p_small}
+
+
+![Dimensión Ambiental MBHT](images/mpi.png){fig-align="center" width="600"}
+
+
+:::
+:::
+
+## Conclusiones: Método Algebraico
+
+::: columns
+
+::: {.column  width="55%" .p_small}
+
+El _Método Algebraico_ muestra una buena representación espacial de la dimensión ambiental. Es capaz de capturar la variabilidad en la dirección correcta con respecto a los indicadores que lo componen, tanto en situaciones con dos indicadores como en casos con un mayor número de ellos.
+
+Además, el Método Algebraico se destaca por su **eficiencia computacional**,  junto con su alta **capacidad de escalabilidad** al uso de un mayor número de indicadores, lo que lo convierte en una opción favorable para su implementación en proyectos futuros.
+
+
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="40%" .p_small}
+
+<br>
+
+![Dimensión Ambiental MBHT](images/algebraico.png){fig-align="center" width="600"}
+
+
+:::
+:::
+
+
+## Conclusiones Generales
+
+::: columns
+
+::: {.column  width="50%" .p_small}
+
+Estas conclusiones sugieren que el **Método Algebraico** es más adecuado para capturar la variabilidad territorial y proporcionar una representación más fiel de la dimensión ambiental en comparación con el Método de Mazziota Pareto Index. Además, su eficiencia computacional y su capacidad de escalabilidad lo hacen una opción prometedora para proyectos futuros sin importar la cantidad de indicadores.
+
+
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="45%" .p_small}
+
+
+![Dimensión Ambiental MBHT](images/comp_amb_subdere.png){fig-align="center" width="600"}
+
+
+:::
+:::
+
+
+
+
+
+
+# Referencias
+
+## Dimension Ambiental Plataforma (SUBDERE)
+
+<center>
+
+```{r fig.align='center'}
+knitr::include_url("https://plataformabht.subdere.gov.cl/visualizations", height = "500px")
+```
+
+</center>
+
+## Indicadores Ambientales CMPC (Nuevos)
+
+<center>
+
+```{r fig.align='center'}
+knitr::include_url("https://experience.arcgis.com/experience/cc2f37eaebfe4dd48f05117e2254cae3/page/AMBIENTAL/", height = "500px")
+```
+
+</center>
+
