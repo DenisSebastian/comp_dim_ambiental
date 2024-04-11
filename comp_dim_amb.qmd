@@ -57,7 +57,7 @@ format:
 ## Objetivos
 
 ::: columns
-::: {.column  width="50%" .p_small}
+::: {.column  width="55%" .p_small}
 
 **Objetivos Generales**
 
@@ -67,15 +67,16 @@ format:
 **Objetivos Específicos**
 
 - Implementar el método Mazziota Pareto Index y el método Algebraico para calcular la dimensión ambiental en el proyecto CMPC y SUBDERE.
-- Realizar un análisis comparativo de los resultados obtenidos por el método Mazziota Pareto Index y el método Algebraico para ambos proyectos.
-- Generar mapas gráficas estadísticas que representen las diferencias entre los resultados ambos métodos por cada proyecto.
+- Realizar un análisis comparativo de los resultados obtenidos por el método Mazziota Pareto Index y el método Algebraico para ambos proyectos, con mapas y gráficas que representen las diferencias.
 
 :::
 
-::: {.column width="5%"}
+::: {.column width="3%"}
 :::
 
-::: {.column width="45%" .p_small}
+::: {.column width="37%" .p_small}
+
+<br>
 
 <br>
 
